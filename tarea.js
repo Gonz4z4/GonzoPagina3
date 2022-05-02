@@ -54,7 +54,7 @@ const sueldoFij = 14000
 valArt = parseFloat(prompt ("Ingrese el valor del artículo"))
 cantArt = parseInt(prompt("Ingrese la cantidad de articulos vendidos"))
 valAllArts = valArt*cantArt*.16
-suelTot=valAllArts +sueldoFij
+suelTot=(valAllArts +sueldoFij).toFixed(3)
 
 console.log("Con un sueldo fijo de $" + sueldoFij + " y " + cantArt + " artículos vendidos en el mes a $" + valArt + " cada uno, el sueldo total debe ser de $" + suelTot )
 */
