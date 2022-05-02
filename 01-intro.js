@@ -30,6 +30,5 @@ altura = parseFloat(altura)
 
 console.log("Hola " + nombre + " " + apellido + " tu edad es " + edad + " años y naciste en " + anioNac + " y medis " + altura + " metros, que son " + (altura -1) + " metros mayor a 1 metro");
 
-alert(sos gay;)
 
 
