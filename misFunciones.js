@@ -18,4 +18,8 @@ function mostrarSaltoLinea (){
     console.log("\n") //imprime un salto de linea
 }
 
+function anoActual() {
+    return new Date().getFullYear();
+}
+
 
