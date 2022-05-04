@@ -19,7 +19,7 @@ let v5 = {
         return this.nombre + " " +this.apellido // this sirve para hacer referencia a este objeto
     },
     edad: function() {
-        return anoActual() - this.anoNac;
+        return anioActual() - this.anoNac;
     },
     presentarse: function() {
         console.log("Hola, soy " + this.nombreCompleto() + " y tengo " + this.edad() + " años y vivo en " +this.domicilio.comoCadena() )
