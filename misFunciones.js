@@ -17,5 +17,5 @@ function saludar(nombre){
 function mostrarSaltoLinea (){
     console.log("\n") //imprime un salto de linea
 }
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+
+

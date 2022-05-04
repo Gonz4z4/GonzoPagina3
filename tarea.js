@@ -99,6 +99,7 @@ console.log("El 3er ángulo debe ser de " + numTot+"º")
 */
 
 //ej 10)
+/*
 let nomb1; let nomb2; let nomb3; let $1; let $2; let $3; let porc1; let porc2; let porc3; let valTot
 
 nomb1= prompt("Ingrese el nombre del primer aportante")
@@ -120,3 +121,50 @@ console.log (
     nomb2 + " aportó un " + porc2 + "%" + "\n" +
     nomb3 + " aportó un " + porc3 + "%"
 )
+*/
+// CONDICIONALES
+// Ej 1)
+/*
+let num
+num = parseInt(prompt("Ingrese un número"))
+
+if (num % 2 == 0){
+    console.log("El número es par")
+} else { 
+    console.log ("El número es impar")
+}
+*/
+
+//Ej 2)
+/*
+let cantInsc; let asientosFalt; let asientosDisp
+cantInsc = parseInt(prompt("Ingrese la cantidad de inscriptos"))
+asientosDisp = parseInt(prompt("Ingrese la cantidad de asientos disponibles"))
+if (cantInsc<=asientosDisp){
+    console.log ("Los asientos ("+ asientosDisp +") son suficientes para la cantidad de inscriptos (" +cantInsc +")")
+} else {
+    asientosFalt = cantInsc - asientosDisp
+    console.log ("Los asientos disponibles (" +asientosDisp+ ") no son suficientes para la cantidad de inscriptos (" +cantInsc+ "). \nFaltan " +asientosFalt+ " asientos")
+}
+*/
+
+//Ej 3)
+/*
+let num1; let num2
+num1= parseInt(prompt("Ingrese un número"))
+num2= parseInt(prompt("Ingrese otro número"))
+if (num1<num2) {
+    console.log ("El mayor es el segundo número ("+ num2+ ")")
+} else {
+    console.log ("El mayor es el primer número ("+ num1+ ")")
+}
+*/
+
+//Ej 4)
+
+let num1; let num2; let num3; let numAlto
+num1=parseInt(prompt("Ingrese un número"))
+num2=parseInt(prompt("Ingrese el segundo número"))
+num3=parseInt(prompt("Ingrese el tercer número"))
+numAlto= Number.MIN_SAFE_INTEGER
+
