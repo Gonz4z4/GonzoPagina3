@@ -161,10 +161,60 @@ if (num1<num2) {
 */
 
 //Ej 4)
-
+/*
 let num1; let num2; let num3; let numAlto
-num1=parseInt(prompt("Ingrese un número"))
+numAlto=parseInt(prompt("Ingrese un número"))
 num2=parseInt(prompt("Ingrese el segundo número"))
 num3=parseInt(prompt("Ingrese el tercer número"))
-numAlto= Number.MIN_SAFE_INTEGER
 
+if (numAlto<num2){
+    numAlto= num2
+}
+if (numAlto<num3){
+    numAlto=num3
+}
+console.log("El numero más alto fue " + numAlto)
+*/
+
+//Ej 5)
+/*
+let edad; let genero;
+edad= parseInt(prompt("Ingrese su edad"))
+genero= prompt("Ingrese su género (M o F)")
+genero=genero.toUpperCase() //NO OLVIDARSE LOS PARENTESIS EN EL TOUPPERCASE
+
+while(edad<1|| edad>120){
+    edad=parseInt(prompt("ERROR. Ingrese su edad"))
+}
+while (!(genero =="M" || genero == "F")){
+    genero=prompt("ERROR. Ingrese su género (M o F)").toUpperCase()
+}
+
+if ((edad>=65 && genero=="M") || (edad>=60 && genero== "F")){
+    console.log("Usted esta en edad de jubilarse")
+} else {
+    console.log("Usted NO esta en edad de jubilarse")
+}
+*/
+//Ej 6)
+
+let edad; let sueldo; let aporte;
+edad= parseInt(prompt("Ingrese su edad"))
+sueldo=parseInt(prompt("Ingrese su sueldo"))
+if(sueldo<=20000){
+    aporte=sueldo*0.7/100
+}
+if(20000<sueldo<30000){
+    aporte=sueldo*1.4/100
+}
+if(30000<=sueldo<40000){
+    aporte=sueldo*2.1/100
+}
+if(40000<sueldo){
+    aporte=sueldo*2.8/100
+}
+if(edad<=30){
+    let extra= 30/100*aporte
+    aporte=aporte+extra
+}
+console.log ("Su aporte es de " + aporte)
