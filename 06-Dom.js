@@ -9,25 +9,28 @@ function validar () {
     }
 }
 */
+let elParrafo=document.getElementById("elParrafo")
+let titulo=document.getElementById("titulo")
+let inputNombre = document.querySelector("#fname")
 let textoAnterior
+let form=document.getElementById("form")
 function handleClickInParagraph(evt){
-    //console.log("Llegamos a " + evt.target.id)
+    console.log("Llegamos a " + evt.target.id)
     textoAnterior= evt.target.innerHTML
     evt.target.innerHTML= "Estan sobre mi!"
 }
 function irse(evt){
-    //console.log("nosfuimos de " + evt.target.id)
+    console.log("nosfuimos de " + evt.target.id)
     evt.target.innerHTML= textoAnterior
 }
 function handleChangeName(evt){
     console.log("Algo")
 }
-
-let elParrafo=document.getElementById("elParrafo")
-let titulo=document.getElementById("titulo")
-let inputNombre = document.querySelector("#fname")
-
-inputNombre.onkeypress= handleChangeName
+function handleForm(evt){
+    //logica para enviado del form
+    console.log("Formulario enviado")
+    return false
+}
 
 elParrafo.onclick = handleClickInParagraph
 elParrafo.onmouseover = handleClickInParagraph
