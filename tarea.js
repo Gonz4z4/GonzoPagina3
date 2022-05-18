@@ -197,24 +197,304 @@ if ((edad>=65 && genero=="M") || (edad>=60 && genero== "F")){
 }
 */
 //Ej 6)
-
-let edad; let sueldo; let aporte;
+/*
+let edad; let sueldo; let aporte; let extra
 edad= parseInt(prompt("Ingrese su edad"))
 sueldo=parseInt(prompt("Ingrese su sueldo"))
 if(sueldo<=20000){
     aporte=sueldo*0.7/100
 }
-if(20000<sueldo<30000){
-    aporte=sueldo*1.4/100
+if(20000<=sueldo && sueldo<30000){
+    aporte=1.4/100*sueldo
 }
-if(30000<=sueldo<40000){
+if(30000<=sueldo && sueldo<=40000){
     aporte=sueldo*2.1/100
 }
 if(40000<sueldo){
     aporte=sueldo*2.8/100
 }
 if(edad<=30){
-    let extra= 30/100*aporte
-    aporte=aporte+extra
+    aporte= 30/100*aporte+aporte //deberia dar 509,6
 }
-console.log ("Su aporte es de " + aporte)
+aporteFin=aporte.toFixed(2)
+console.log ("Su aporte es de " + aporteFin)
+*/
+
+//ej 7)
+/*
+let num1; let num2; let num3
+num1=parseInt(prompt("Ingrese el primer numero"))
+num2=parseInt(prompt("Ingrese el segundo numero"))
+num3=parseInt(prompt("Ingrese el tercer numero"))
+
+if (num1<num2 && num2<num3){
+        console.log (num1+" "+num2+" "+num3)
+} 
+if (num3<num2 && num2<num1){
+    console.log (num3+" "+num2+" "+num1)
+}
+if (num1<num3 && num3<num2){
+    console.log (num1+" "+num3+" "+num2)
+}
+if (num2<num1 && num1<num3){
+    console.log (num2+" "+num1+" "+num3)
+}
+if (num2<num3 && num3<num1){
+    console.log (num2+" "+num3+" "+num1)
+}
+if (num3<num1 && num1<num2){
+    console.log (num3+" "+num1+" "+num2)
+}
+*/
+
+//ej 8)
+/*
+let num1; let num2; let numMay; let numMin
+
+num1=parseInt(prompt("Ingrese el primer numero"))
+num2=parseInt(prompt("Ingrese el segundo numero"))
+
+if (num1<num2){
+    numMay= num2
+    numMin=num1
+} else {
+    numMay=num1
+    numMin=num2
+}
+if (numMay % numMin == 0) {
+    console.log("El numero mayor es divisible por el menor.\nLa división entre el numero mayor y el menor es de " + numMay/numMin)
+} else {
+    console.log ("El numero mayor ingresado no es divisible por el menor.")
+}
+*/
+
+//ej 9
+/*
+let a;let b;let c;
+a=parseInt(prompt("Ingrese el primer lado"))
+b=parseInt(prompt("Ingrese el segundo lado"))
+c=parseInt(prompt("Ingrese el tercer lado"))
+
+    //Triangulo válido:
+if (a+b>=c && a+c>=b && c+b>=a) {
+    console.log("El triángulo es posible")
+} else {
+    console.log ("El triángulo NO es posible")
+}
+
+    //Tipo de triángulo
+if(a==b==c){
+    console.log("Es equilátero")
+} else if (a==b && c!=a&b || b==c && a!=c&b|| a==c && b!=c&a){
+    console.log("Es isóceles")
+} else {
+    console.log("Es escaleno")
+}
+*/
+
+//ej 10)
+/*
+let mes= parseInt(prompt("Ingrese el número del mes"))
+switch(mes){
+    case 1:
+        mes= "enero"
+        break;
+    case 2:
+        mes= "febrero"
+        break;
+    case 3:
+        mes= "marzo"
+        break;
+    case 4:
+        mes= "abril"
+        break;
+    case 5:
+        mes= "mayo"
+        break;
+    case 6:
+        mes= "junio"
+        break;
+    case 7:
+        mes= "julio"
+        console.log("Este mes es culpa de julio cesar")
+        break;
+    case 8:
+        mes= "agosto"
+        console.log("Este mes es culpa de julio cesar")
+        break;
+    case 9:
+        mes= "septiembre"
+        break;
+    case 10:
+        mes= "octubre"
+        break;
+    case 11:
+        mes= "noviembre"
+        break;
+    case 12:
+        mes= "diciembre"
+        break;
+    default:
+        mes= "inexistente"
+}
+console.log("Ese mes es " + mes)
+*/
+// ej 11)
+/*
+let digrom = prompt ("ingresa un digito romano (I, V, X, L, C, D, M)");
+
+switch(digrom) {
+    case "I":
+        console.log (1);
+        break;
+    case "V":
+        console.log (5);
+        break;
+    case "X":
+        console.log (10);
+        break;
+    case "L":
+        console.log (50);
+        break;
+    case "C":
+        console.log (100);
+        break;
+    case "D":
+            console.log (500);
+            break;
+    case "M":
+        console.log (1000)
+        break;
+    default:
+        console.log ("eso no es un digito romano")
+*/
+
+//ej 12)
+/*
+let mes; let dia; let signo
+dia = parseInt(prompt("Ingrese el número del día de su nacimiento"))
+mes = parseInt(prompt("Ingrese el número del mes de su nacimiento"))
+if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1)){
+        signo = "Capricornio"}
+else if ((dia >= 21 && mes == 1) || (dia <= 19 && mes == 2)){
+        signo = "Acuario"}
+if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3)){
+        signo = "Picis"}
+if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4)){
+        signo = "Aries"}
+if ((dia >= 21 && mes == 4) || (dia <= 20 && mes == 5)){
+        signo = "Tauro"}
+if ((dia >= 21 && mes == 5) || (dia <= 21 && mes == 6)){
+        signo = "Geminis"}
+if ((dia >= 22 && mes == 6) || (dia <= 22 && mes == 7)){
+        signo = "Cancer"}
+if ((dia >= 23 && mes == 7) || (dia <= 23 && mes == 8)){
+        signo = "Leo"}
+if ((dia >= 24 && mes == 8) || (dia <= 22 && mes == 9)){
+        signo = "Virgo"}
+if ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10)){
+        signo = "Libra"}
+if ((dia >= 23 && mes == 10) || (dia <= 22 && mes == 11)){
+        signo = "Escorpio"}
+if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12)){
+        signo = "Sagitario"}
+console.log("Tu signo es "+ signo)
+*/
+
+
+
+// EJERCICIOS LOOPS
+//ej 1)
+/*
+console.log("Números de 1 al 100")
+for (let i = 1; i <= 100; i++) {
+    const element = 100[i];
+    console.log(i)
+}
+console.log("Números del 100 al 1")
+for (let i = 100; i >= 1 ; i--) {
+    const element = 1[i];
+    console.log(i)
+}
+*/
+//Ej 2) a)
+/*
+num1=parseInt(prompt("Ingrese el primer número"))
+num2=parseInt(prompt("Ingrese el segundo número"))
+while (num1>num2) {
+    num1=parseInt(prompt("ERROR, el primer número debe ser menor al segundo. Ingrese el primer número"))
+    num2=parseInt(prompt("Ingrese el segundo número"))
+}
+for (let i = num1; i <= num2; i++) {
+    const element = num2[i];
+    console.log(i)
+}
+*/
+
+//Ej 2)b)
+/*
+num1=parseInt(prompt("Ingrese el primer número"))
+num2=parseInt(prompt("Ingrese el segundo número"))
+while (num1>num2) {
+    num1=parseInt(prompt("ERROR, el primer número debe ser menor al segundo. Ingrese el primer número"))
+    num2=parseInt(prompt("Ingrese el segundo número"))
+}
+for (let i = num1+1; i < num2; i++) {
+    const element = num2[i];
+    console.log(i)
+}
+*/
+
+//ej 3)
+/*
+num=parseInt(prompt("Ingrese un número del 1 al 10"))
+while (num<1||num>10) {
+    num=parseInt(prompt("ERROR. Ingrese un número del 1 al 10"))
+}
+for (let cont = 1; cont <= 10; cont++) {
+    const element = 10[cont];
+    console.log(cont +" x "+ num +" = "+(num*cont))
+}
+*/
+
+//ej 4)
+/*
+let a=1
+let n=parseInt(prompt("Ingrese cuantos multiplos de 3 y no de 5 quiere ver"))
+
+for (let cont = 1; a <= n;cont++) {
+    const element = n[cont];
+    let mult = cont*3
+    if (mult % 5 !== 0) {
+        console.log(mult)
+        a++
+    }
+    
+}
+*/
+// ej 5)
+/*
+let contMayoresImp=0
+for (let i = 0; i < 5; i++) {
+    const element = 5[i];
+    let edad=parseInt(prompt("Ingrese una edad"))
+    if(edad>18 && edad % 2 !== 0 ){
+        contMayoresImp++
+    }
+}
+console.log("La cantidad de mayores impares fue "+contMayoresImp)
+*/
+
+//ej 6)
+/*
+let cantVentas; let precio; let precioTot=0; let i = 1
+cantVentas= parseInt(prompt("Ingrese la cantidad de ventas a ingresar"))
+for (; i <= cantVentas; i++) {
+    const element = cantVentas[i];
+    precio=parseInt(prompt("Ingrese el precio de la venta "+ i))
+    precioTot=precioTot+precio
+    console.log("Venta " + i + " fue de $" + precio)
+}console.log("Obtuvimos $"+precioTot+" en total")
+*/
+
+//ej 7)
