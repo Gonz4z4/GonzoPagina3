@@ -498,3 +498,218 @@ for (; i <= cantVentas; i++) {
 */
 
 //ej 7)
+/*
+let cantJugadores; let estatura; let estaturaTot=0; let i = 1
+cantJugadores= parseInt(prompt("Ingrese la cantidad de jugadores"))
+for (; i <= cantJugadores; i++) {
+    estatura=parseInt(prompt("Ingrese la estatura del jugador "+ i))
+    estaturaTot=estaturaTot+estatura
+    console.log("La estatura del jugador " + i + " es de " + estatura+"cm")
+}
+let estaturaProm=(estaturaTot/cantJugadores).toFixed(0)
+console.log("La estatura promedio es de "+estaturaProm+"cm")
+*/
+
+// ej 8)
+/*
+let cant; let mayor;let pos
+cant=parseInt(prompt("Ingrese la cantidad de numeros que quiere ingresar"))
+mayor=(Number.MIN_SAFE_INTEGER)
+for (let i = 1; i <= cant; i++) {
+    let num=parseInt(prompt("Ingrese un número"))
+    if (num>mayor) {
+        mayor=num
+        pos=i
+    }
+    console.log("El "+i+"er número fue " +num)
+}
+console.log("El mayor número fue "+mayor+ " en la posición "+pos)
+*/
+
+// ej 9)
+/*
+let num=parseInt(prompt("Ingrese el número del cual quiere conocer su factorial"))
+let factorial=1
+for (let i = 1; i <= num; i++) {
+    factorial=factorial*i
+}
+console.log("El factorial de "+num+" es "+ factorial)
+*/
+
+//ej 10)
+/*
+let nota = parseInt(prompt("Ingrese una nota entre 0 y 10"))
+
+while (nota<0 || nota >10) {
+    nota = parseInt(prompt("ERROR. Ingrese una nota entre 0 y 10"))
+}
+console.log("Muchas gracias. Su nota es " +nota)
+*/
+
+//ej 11)
+/*
+let nota = parseInt(prompt("Ingrese una nota entre 0 y 10"))
+
+while ( nota<2 || nota==3|| nota >10) {
+    nota = parseInt(prompt("ERROR. Ingrese una nota entre 0 y 10 (recuerde que 1 y 3 no son notas válidas y el 0 le será asignado solo si estuvo ausente"))
+}
+
+console.log("Muchas gracias. Su nota es " +nota)
+*/
+
+//ej 12)
+/*
+let rta = prompt("Desea continuar? (S/N)").toUpperCase()
+while(!(rta=="S"|| rta=="N")){
+    rta = prompt("ERROR, ingrese solo las opciones asignadas. Desea continuar? (S/N)").toUpperCase()
+}
+console.log("muchas gracias, su respuesta fue "+rta)
+*//*
+let rta
+do{
+    rta = prompt("Desea continuar? (S/N)").toUpperCase()
+}
+while(!(rta=="S"|| rta=="N"))
+console.log("muchas gracias, su respuesta fue "+rta)
+*/
+//ej 13)
+/*
+let max; let min; let num
+max= (Number.MIN_SAFE_INTEGER)
+min= (Number.MAX_SAFE_INTEGER)
+do{
+    num=parseInt(prompt("Ingrese tantos números como desee (para frenar presione 0"))
+    if (num>max) {
+        max=num
+    }
+    if(num<min){
+        min=num
+    }
+
+}
+while(num!=0)
+console.log("El número maximo fue "+max+ " y el mínimo fue "+min)
+*/
+
+//ej 14)
+/*
+let nombre; let edad; let edadMin; let nombreJov
+edadMin=(Number.MAX_SAFE_INTEGER)
+do{
+    nombre=prompt("Ingrese un Nombre")
+    if(nombre!="*"){
+        edad=parseInt(prompt("Ingrese la edad de "+nombre))
+        if(edad<edadMin){
+            edadMin=edad
+            nombreJov=nombre
+            console.log("nueva edad minima de "+nombreJov+"("+edadMin+")")
+    }
+    }
+    
+}
+while(nombre!="*")
+console.log("bolas")
+console.log("La persona más joven fue "+nombreJov+" con "+edadMin+" años.")
+*/
+
+//ej 15)
+/*
+let promedio; let num; let i; let numTot
+i=1
+numTot=0
+do {num=parseInt(prompt("Ingrese un numero"))
+    numTot=numTot+num
+    promedio=numTot/i
+    console.log("i="+i+"\nnumTot="+numTot+"\npromedio="+promedio+"\nnum="+num)
+    i++
+} while (promedio<20);
+*/
+
+//ej 16)
+/*
+let rta; let parCnt; let num; let parPrc; let i
+i=0
+parCnt=0
+do {i++
+    num=parseInt(prompt("Ingrese un número"))
+    if(num % 2 == 0){
+        parCnt++
+    }
+    rta=prompt("Quiere seguir ingresando números? [S/N]").toUpperCase()
+    while(!(rta=="S"||rta=="N")){
+        rta=prompt("ERROR. Quiere seguir ingresando números? [S/N]").toUpperCase()
+    }
+} while (rta!=="N");
+parPrc=(parCnt/i)*100
+console.log("Se ingresaron "+i+" números, de los cuales "+parCnt+" fueron pares.\nEl porcentaje de pares fue "+parPrc+"%")
+*/
+
+//ej 17)
+/*
+let articulo; let precio; let total; let rta;let cantidad
+total=0
+do {articulo=prompt("Ingrese EL NOMBRE del artículo")
+    precio=parseInt(prompt("Ingrese EL PRECIO del artículo"))
+    cantidad=parseInt(prompt("Ingrese LA CANTIDAD del artículo"))
+    total=total+(precio*cantidad)
+    console.log(articulo+": "+(precio*cantidad)+" ("+precio+"xU) ("+cantidad+" unidades).")
+    rta=prompt("Quiere seguir ingresando articulos? [S/N]").toUpperCase()
+    while(!(rta=="S"||rta=="N")){
+        rta=prompt("ERROR. Quiere seguir ingresando articulos? [S/N]").toUpperCase()
+    }
+} while (rta!=="N")
+console.log("Total: "+total)
+*/
+
+//ej 18)
+/*
+let sueldoMes; let sueldoAño; let i
+i=0
+sueldoAño=0
+do {i++
+    sueldoMes=parseInt(prompt("Ingresá el sueldo para el mes "+i))
+    sueldoAño=sueldoAño+sueldoMes
+} while ((sueldoMes>=0)&&(i<12))
+
+console.log("El sueldo anual es de "+sueldoAño)
+*/
+
+//ej 19)
+/*
+let user= "admin"
+let pass= "123456"
+let inputUser=prompt("Ingresá tu usuario")
+let inputPass=prompt("Ingresá tu contraseña")
+let i=2
+if(user==inputUser&&pass==inputPass){
+    console.log("Bienvenido")
+} 
+else{
+    do{ inputUser=prompt("ERROR. Quedan "+i+" intentos. Ingresá tu usuario")
+    inputPass=prompt("Ingresá tu contraseña")
+    i--
+    } while(inputUser!==user&&inputPass!==pass&&i>0)
+
+    if(user==inputUser&&pass==inputPass){
+    console.log("Bienvenido")
+    } else {
+    console.log("Vayase de aca sucio")
+    }
+}
+*/
+
+//TAREA DE FUNCIONES LETS GOOOO
+//ej 1)
+/*
+    function esPar(num){
+        return num %2==0
+    }
+    num=parseInt(prompt("ingrese un numero para ver si es par"))
+    console.log(esPar(num))
+*/
+
+//ej 2)
+/*
+    function resto (num, div){
+        return num%div}
+*/
