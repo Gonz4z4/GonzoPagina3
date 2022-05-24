@@ -700,16 +700,76 @@ else{
 
 //TAREA DE FUNCIONES LETS GOOOO
 //ej 1)
-/*
+
     function esPar(num){
         return num %2==0
     }
-    num=parseInt(prompt("ingrese un numero para ver si es par"))
-    console.log(esPar(num))
-*/
+
 
 //ej 2)
-/*
+
     function resto (num, div){
         return num%div}
-*/
+
+
+//ej 3)
+
+    function imprimirSimbolo (caracter, veces){
+        console.log (caracter.repeat(veces))}
+
+
+//ej 4)
+    function esVocal (letra){
+        letra= letra.toLowerCase()
+        if (letra.length>1)
+            {console.log("Esa es más que una letra")}
+            else if (letra == "a"||letra == "e"||letra == "i"||letra == "o"||letra == "u" ) {
+            console.log("Es vocal")
+            } else{
+            console.log ("No es vocal")
+            }
+    }
+
+//ej 5)
+    function mostrarSucesion(num1, num2) {
+        if(num1>num2){
+            for (let i = num1; i >= num2; i--) {
+                console.log(i)
+            }
+        } else if (num1<num2) {
+            for (let i = num1; i <= num2; i++) {
+                console.log(i)
+        }
+        } else {
+            console.log(num1)
+        } 
+    }
+
+//ej 6)
+    //no era esta pero me salio divertida xd
+    function esDivisible(num1, num2){
+        if (num1%num2==0){
+            console.log(num1 +" es divisible por "+num2)
+        } else if(num2%num1==0){
+            console.log(num1 +" no es divisible por "+num2 + ", pero "+num2+" si es divisible por "+num1)
+        }
+        else {
+            console.log(num1 +" no es divisible por "+num2+" :(")
+        }
+    }
+    //esta si
+    function esMultiplo(num1, num2){
+        if (num1%num2==0){
+            console.log(num1 +" es multiplo de "+num2)
+        } else if(num2%num1==0){
+            console.log(num1 +" no es multiplo de "+num2 + ", pero "+num2+" si es multiplo de "+num1)
+        }
+        else {
+            console.log(num1 +" no es multiplo de "+num2+" :(")
+        }
+    }
+
+//ej 7)
+    function cantDivisores(){
+        
+    }
