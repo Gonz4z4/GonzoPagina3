@@ -770,6 +770,57 @@ else{
     }
 
 //ej 7)
-    function cantDivisores(){
-        
+    function cantDivisores(num){
+        let contDiv=0
+        for (let i = 0; i <= num; i++) {
+            if (num%i==0){
+                contDiv++
+                //console.log(num +" es divisible por "+i+"\n"+"Divisores hasta ahora: "+contDiv)
+            }
+        }
+        //console.log("La cantidad de divisores totales es "+contDiv)
+        return contDiv
     }
+
+//ej 8)
+    function esPrimo(num){
+        let contDiv=cantDivisores(num)
+        if (contDiv>2||contDiv<2) {
+            //console.log (num+ " no es primo")
+            return false
+        } else{
+            //console.log(num+" es primo")
+            return true
+        }
+    }
+//funcion esPrimo pero no optimizada para extra facha
+/*
+    function esPrimo(num){
+        let contDiv=0
+        for (let i = 0; i < num; i++) {
+            if (num%i==0){
+                contDiv++
+                console.log(num +" es divisible por "+i+"\n"+"Divisores hasta ahora: "+contDiv)
+            }
+        }
+        if (contDiv>1||contDiv<1) {
+            console.log (num+ " no es primo")
+        } else{
+            console.log(num+" es primo")
+        }
+    }
+*/
+//ej 9)
+    function mostrarNPrimos(num){
+        let contPrimos = 0
+        let i=0
+        do {if (esPrimo(i)== true){
+                console.log(i)
+                contPrimos++
+            }
+            i++
+        } while (contPrimos<num)
+    }
+
+//ej 10)   
+    function esNumeroPerfecto()
