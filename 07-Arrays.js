@@ -8,10 +8,11 @@ console.log(cars[2])
 console.log(cars[3])
 console.log(cars[-1])
 */
-
-for (let i = 0; i < cars.length; i++) {
-    const element = cars[i];
-    console.log(element)
+function recorrerArray(){
+    for (let i = 0; i < cars.length; i++) {
+        const element = cars[i];
+        console.log(element)
+    }
 }
 
 //cars.push sirve para agregar una nueva marca

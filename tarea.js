@@ -827,7 +827,7 @@ else{
         let sum=0
         for (let i = 0; i < num; i++) {
             if(num%i==0){
-                sum=sum+i
+                sum+=i //+= suma lo de la izquierda con lo de la derecha
             }
         }
         if (sum==num){
@@ -866,6 +866,7 @@ else{
     }
 */
 //ej 13
+/*
 let articulo; let precio; let total; let rta;let cantidad
 total=0
 do {articulo=prompt("Ingrese EL NOMBRE del artículo")
@@ -879,3 +880,4 @@ do {articulo=prompt("Ingrese EL NOMBRE del artículo")
     }
 } while (rta!=="N")
 console.log("Total: "+total)
+*/

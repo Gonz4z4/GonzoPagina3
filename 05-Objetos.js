@@ -36,3 +36,16 @@ console.log (v5.nombre+" "+ v5.apellido);
 console.log (v5.nombreCompleto())
 console.log (v5.edad())
 v5.presentarse()
+
+let gonzo= {
+    nombre: "Gonzalo",
+    apellido: "Arias",
+    sexo: true,
+    anioNac: 2001,
+    hijos: false,
+    habilidades:{
+        tetris: true,
+        programacion: false,
+        otrasCosas: "Quiza"
+    }
+}
