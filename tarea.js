@@ -823,4 +823,59 @@ else{
     }
 
 //ej 10)   
-    function esNumeroPerfecto()
+    function esNumeroPerfecto(num){
+        let sum=0
+        for (let i = 0; i < num; i++) {
+            if(num%i==0){
+                sum=sum+i
+            }
+        }
+        if (sum==num){
+            console.log(num+" es un número perfecto")
+        } else{
+            console.log(num+" no es un número perfecto")
+        }
+    }
+
+//ej 11
+/*
+    let valorUni; let cantArt; let sueFij; let extra;let sueldoTotal
+    valorUni= parseInt(prompt("Ingrese el valor de los productos vendidos"))
+    cantArt=parseInt(prompt("Ingrese la cantidad de articulos vendidos"))
+    sueFij=14000
+    extra=valorUni*cantArt*0.16
+    sueldoTotal=extra+sueFij
+    console.log(sueldoTotal)
+*/
+//ej 12
+/*
+    let sexo=prompt("Ingrese su sexo (F o M)").toLowerCase()
+    let edad=parseInt(prompt("Ingrese su edad"))
+    let rta
+    while (!(sexo=="m"||sexo=="f")){
+        sexo=prompt("ERROR. Ingrese su sexo (F o M)").toLowerCase()
+    }
+    while(edad<0||edad>120){
+        edad=parseInt(prompt("ERROR. Ingrese su edad"))
+    }
+    edadJub(sexo, edad)
+    if (rta=="fJub"||rta=="mJub"){
+        console.log("Si! Esta en edad de jubilarse")
+    } else {
+        console.log("No esta en edad de jubilarse")
+    }
+*/
+//ej 13
+let articulo; let precio; let total; let rta;let cantidad
+total=0
+do {articulo=prompt("Ingrese EL NOMBRE del artículo")
+    precio=parseInt(prompt("Ingrese EL PRECIO del artículo"))
+    cantidad=parseInt(prompt("Ingrese LA CANTIDAD del artículo"))
+    total=total+(precio*cantidad)
+    console.log(articulo+": "+(precio*cantidad)+" ("+precio+"xU) ("+cantidad+" unidades).")
+    rta=prompt("Quiere seguir ingresando articulos? [S/N]").toUpperCase()
+    while(!(rta=="S"||rta=="N")){
+        rta=prompt("ERROR. Quiere seguir ingresando articulos? [S/N]").toUpperCase()
+    }
+} while (rta!=="N")
+console.log("Total: "+total)
